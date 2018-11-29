@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="container-fluid p-0">
+  <div style="height:800px; background-color:#2B2B43; color: white;">
+    <div class="col-12">
+      <input type="button" class="btn btn-primary py-2 px-3 my-3"(click)="open(content)" value="CREATE USER">
+    </div>
+
+      <div class="col-12">
+        <table class="table table-hover usersTable">
+          <tr class="d-flex justify-content-center" *ngFor="let user of users">
+            <td class="col-1">{{user.date | date:"MMM d y"}}</td>
+            <td class="col-2">
+              <h5>{{user.name}} {{user.surname}}</h5>
+              <p>{{user.phone}}</p>
+            </td>
+            <td class="col-2">{{user.role}}</td>
+            <td class="col-2">
+              <select class="form-control col-12" id="role" (change)="selectedRole($event,user.id)">
+                <option disabled="disabled">ADD ROLE</option>
+                <option *ngFor="let role of roles" value="{{role}}">{{role }}</option>
+              </select>
+            </td>
+            <td class="col-1 text-center" (click)="deleteUser(user.id)"><i class="fa fa-trash" aria-hidden="true"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create user</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form name="form" id="form" (ngSubmit)="f.form.valid && onSubmit(f,content)" #f="ngForm" novalidate>
+      <div class="form-group">
+        <label for="firstName">Name</label>
+        <input type="text" id="firstName" class="form-control" name="name" [(ngModel)]="model.name" #name="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required/>
+        <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+          <div *ngIf="name.errors.required">Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Surame</label>
+        <input type="text" id="lastName" class="form-control" name="surname" [(ngModel)]="model.surname"
+               #surname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && surname.invalid }" required/>
+        <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+          <div *ngIf="surname.errors.required">Surname is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email/>
+        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="text" id="phone" class="form-control" name="phone" pattern="^((\+)374)[1-9]{8}$"
+               [(ngModel)]="model.phone" #phone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }"
+               minlength="12" required/>
+        <div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+          <div *ngIf="phone.errors.required">Phone is required</div>
+          <div *ngIf="phone.errors.minlength">Phone number must be in this view` +37493552465</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="selectRole">Add role</label>
+        <select class="form-control col-12" id="selectRole" name="role" [(ngModel)]="model.role" #role="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && role.invalid }" required>
+          <option *ngFor="let role of roles" value="{{role}}">{{role}}</option>
+        </select>
+        <div *ngIf="f.submitted && role.invalid" class="invalid-feedback">
+          <div *ngIf="role.errors.required">Role is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<app-footer></app-footer>

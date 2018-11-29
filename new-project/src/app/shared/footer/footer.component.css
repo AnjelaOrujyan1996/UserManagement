@@ -1,0 +1,42 @@
+.last p{
+  font-size: 14px !important;
+}
+.social-icon li:not(:first-child){
+  margin-left: 3px;
+}
+.widget-footer h4 {
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  font-family: "Titillium Web", serif;
+}
+.widget-footer ul li {
+  margin-bottom: 14px;
+}
+.widget-footer ul li a {
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  display: contents;
+}
+.widget-footer ul li a:hover {
+  color: #e8f4ff;
+}
+.widget-footer p {
+  color: #FFFFFF ;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.copyright {
+  width: 100%;
+  display: inline-block;
+  padding: 31px 0 35px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.copyright p {
+  font-size: 14px;
+  color: rgba(32, 70, 57, 1);
+  text-align: left;
+  letter-spacing: 1px;
+}

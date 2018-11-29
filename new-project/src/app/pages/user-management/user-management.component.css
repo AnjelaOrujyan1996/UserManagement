@@ -1,0 +1,29 @@
+div{
+  color: black !important;
+}
+
+#role{
+  background: transparent !important;
+  border: none !important;
+  color: white !important;
+}
+#role option:first-child{
+  disabled: true !important;
+}
+
+
+#role option:nth-child(even){
+  background-color:#474B7B !important;
+}
+
+#role option:nth-child(odd){
+  background-color:#2B2B43 !important;
+}
+
+.usersTable tr{
+  color: white !important;
+}
+
+.cross-validation-error input {
+  border-left: 5px solid darkred;
+}

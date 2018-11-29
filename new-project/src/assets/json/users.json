@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "phone": "+37455246577",
+      "name": "Jacob",
+      "surname": "Smith1",
+      "email": "jacobsmith@gmail.com",
+      "role": "Content Manager",
+      "date": "18 May 2018",
+      "allRoles": ["Content manager", "Dispatchers", "Customers", "Operators", "Logistics manager", "Courier", "Sales manager", "Marketing", "Finance", "Parther", "Company manager","Company admin"]
+    },
+    {
+      "id": 2,
+      "phone": "+37455246577",
+      "name": "Jacob",
+      "surname": "Smith2",
+      "email": "jacobsmith@gmail.com",
+      "role": "Content Manager",
+      "date": "18 May 2018",
+      "allRoles": ["Content manager", "Dispatchers", "Customers", "Operators", "Logistics manager", "Courier", "Sales manager", "Marketing", "Finance", "Parther", "Company manager","Company admin"]
+    },
+    {
+      "id": 3,
+      "phone": "+37455246577",
+      "name": "Jacob",
+      "surname": "Smith3",
+      "email": "jacobsmith@gmail.com",
+      "role": "Content Manager",
+      "date": "18 May 2018",
+      "allRoles": ["Content manager", "Dispatchers", "Customers", "Operators", "Logistics manager", "Courier", "Sales manager", "Marketing", "Finance", "Parther", "Company manager","Company admin"]
+    }
+  ]
+}

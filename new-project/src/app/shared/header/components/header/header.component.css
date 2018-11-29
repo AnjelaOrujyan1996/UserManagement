@@ -1,0 +1,8 @@
+header.transparent .logo-mobile {
+  top: 10px;
+  -ms-transform: translate(0);
+  transform: translate(0);
+}
+header .logo img {
+  max-width: 144px;
+}
