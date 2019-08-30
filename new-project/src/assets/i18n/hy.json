@@ -1,0 +1,21 @@
+{
+  "demo": {
+    "title": "",
+    "language": "Լեզուն({language})",
+    "menu": {
+      "overview": "Ակնարկ",
+      "userManagement": "օգտագործողի կառավարում",
+      "zoneConstructor": "զոնա",
+      "settings": "կարգավորումներ"
+    },
+    "overview": {
+      "title": "Ակնարկ"
+    },
+    "setting": {
+      "title": "Կարգավորումներ"
+    },
+    "zone":{
+      "title": "Զոնա"
+    }
+  }
+}

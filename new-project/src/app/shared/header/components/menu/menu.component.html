@@ -4,16 +4,34 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/overview" routerLinkActive="active">Overview </a>
+          <a class="nav-link" routerLink="/overview" routerLinkActive="active">{{ 'demo.menu.overview' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  routerLink="/userManagement" routerLinkActive="active">User management</a>
+          <a class="nav-link"  routerLink="/userManagement" routerLinkActive="active">{{ 'demo.menu.userManagement' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/zoneConstructor" routerLinkActive="active">Zone Constructor</a>
+          <a class="nav-link" routerLink="/zoneConstructor" routerLinkActive="active">{{ 'demo.menu.zoneConstructor' | translate }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/settings" routerLinkActive="active">Settings</a>
+          <a class="nav-link" routerLink="/settings" routerLinkActive="active">{{ 'demo.menu.settings' | translate }}</a>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button *ngIf="language==='en'" class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              {{'demo.language'  |  translate:"{ language: 'EN' }" }}
+            </button>
+            <button *ngIf="language==='ru'" class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              {{'demo.language'  |  translate:"{ language: 'RU' }" }}
+            </button>
+            <button *ngIf="language==='hy'" class="btn btn-secondary dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              {{'demo.language'  |  translate:"{ language: 'HY' }" }}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <p class="dropdown-item" (click)="changeLanguage('hy')" >Armenian(HY)</p>
+              <p class="dropdown-item" (click)="changeLanguage('ru')">Russian(RU)</p>
+              <p class="dropdown-item" (click)="changeLanguage('en')">English(EN)</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

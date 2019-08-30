@@ -1,0 +1,21 @@
+{
+  "demo": {
+    "title": "Oбзорная страница",
+    "language": "Язык({language})",
+    "menu": {
+      "overview": "Обзор",
+      "userManagement": "Управление пользователями",
+      "zoneConstructor": "Kонструктор зоны",
+      "settings": "Hастройки"
+    },
+    "overview": {
+      "title": "Обзор"
+    },
+    "setting": {
+      "title": "Hастройки"
+    },
+    "zone":{
+      "title": "Kонструктор зоны"
+    }
+  }
+}

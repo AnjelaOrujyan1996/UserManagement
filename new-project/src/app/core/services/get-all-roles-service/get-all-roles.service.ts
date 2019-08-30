@@ -9,7 +9,6 @@ export class GetAllRolesService {
   constructor(private http: HttpClient) { }
 
   getAllRoles(){
-    console.log("++++++++++++++++++++++++++++++++++++++++")
     return this.http.get('./assets/json/roles.json');
   }
 }

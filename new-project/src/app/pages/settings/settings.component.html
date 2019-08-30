@@ -1,6 +1,6 @@
-<app-header></app-header>
-  <div class="row " style="height:800px; background-color:#2B2B43; color: white;">
-    <h1 class="col-12 text-center mt-5">Settings!</h1>
+<app-header (valueChange)="changeLanguage($event)"></app-header>
+  <div style="height:800px; background-color:#2B2B43; color: white;">
+    <h1 class="col-12 text-center">{{ 'demo.setting.title' | translate }}</h1>
   </div>
 <app-footer></app-footer>
 

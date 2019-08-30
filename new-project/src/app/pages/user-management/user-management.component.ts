@@ -5,6 +5,7 @@ import {UsersListService} from "../../core/services/get-users-service/users-list
 import {GetAllRolesService} from  "../../core/services/get-all-roles-service/get-all-roles.service"
 import {generateId} from  "./dinamicIdGenerator"
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-user-management',
@@ -19,12 +20,17 @@ export class UserManagementComponent implements OnInit,OnDestroy {
   public userInit:IUserView;
   private subscription: Subscription;
 
-  constructor(private UsersService:UsersListService, private GetAllRoles:GetAllRolesService, private modalService: NgbModal) { }
+  constructor(private translate: TranslateService, private UsersService:UsersListService, private GetAllRoles:GetAllRolesService, private modalService: NgbModal) {
+    translate.setDefaultLang('en');
+  }
 
   open(content) {
     this.modalService.open(content, {backdropClass: 'light-gray-backdrop'});
   }
 
+  changeLanguage(ln){
+    this.translate.use(ln);
+  }
 
   ngOnInit() {
     this.subscription = this.UsersService.getUsers().subscribe((data)=>{

@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { HeaderComponent } from './components/header/header.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { RouterModule } from '@angular/router';
-import {routes} from '../../routes';
+import {SharedModule} from "../shared.module";
+import {MenuComponent} from "./components/menu/menu.component";
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes,  {scrollPositionRestoration: 'top'})
+    SharedModule
   ],
-  declarations: [MenuComponent, HeaderComponent],
-  exports: [HeaderComponent, RouterModule]
+  // declarations: [MenuComponent],
+  exports: [MenuComponent]
 })
 export class HeaderModule { }

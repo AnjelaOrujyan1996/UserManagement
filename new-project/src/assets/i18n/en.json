@@ -1,0 +1,21 @@
+{
+  "demo": {
+    "menu": {
+      "overview": "Overview",
+      "userManagement": "User management",
+      "zoneConstructor": "Zone constructor",
+      "settings": "Settings"
+    },
+    "language": "Language({language})",
+    "overview": {
+      "title": "Overview"
+    },
+    "setting": {
+      "title": "Settings"
+    },
+    "zone":{
+      "title": "Zone constructor"
+    }
+  }
+}
+
